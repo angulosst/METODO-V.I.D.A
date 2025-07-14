@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÉTODO V.I.D.A.® - De Jefe Estresado a Líder que Inspira | Nhora Angulo</title>
+    <!-- Hotmart Tracking -->
+    <script src="https://static.hotmart.com/checkout/widget.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f8f9fb 0%, #e8eef5 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 50%, #1d4ed8 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,100 1000,0"/></svg>');
+            background-size: cover;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .method-name {
+            color: #fbbf24;
+            text-decoration: underline;
+            text-decoration-color: #fbbf24;
+            text-underline-offset: 8px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 400;
+            line-height: 1.3;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .header .promise {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #1e40af;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 25px 35px;
+            border-radius: 20px;
+            margin: 30px auto;
+            max-width: 800px;
+            border: 2px solid #cbd5e1;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .urgency-banner {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: -30px auto 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(245,158,11,0.5);
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            animation: urgentPulse 2s infinite;
+        }
+        
+        @keyframes urgentPulse {
+            0% { transform: scale(1); box-shadow: 0 10px 30px rgba(245,158,11,0.5); }
+            50% { transform: scale(1.03); box-shadow: 0 15px 40px rgba(245,158,11,0.7); }
+            100% { transform: scale(1); box-shadow: 0 10px 30px rgba(245,158,11,0.5); }
+        }
+        
+        .countdown-timer {
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            color: #fbbf24;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            border: 2px solid #1e40af;
+        }
+        
+        .timer-numbers {
+            font-size: 2em;
+            color: #f59e0b;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .video-section {
+            background: white;
+            margin: -30px auto 40px;
+            padding: 60px;
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .video-section h2 {
+            font-size: 2.8em;
+            color: #1e40af;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .video-section p {
+            font-size: 1.3em;
+            color: #64748b;
+            margin-bottom: 35px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .video-container {
+            position: relative;
+            background: #f1f5f9;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            max-width: 800px;
+            margin: 0 auto;
+            height: 450px;
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .identification-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 6px solid #1e40af;
+            padding: 60px;
+            border-radius: 25px;
+            margin: 50px 0;
+        }
+        
+        .identification-section h3 {
+            color: #92400e;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .identification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .identification-item {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #1e40af;
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #92400e;
+            transition: transform 0.3s ease;
+        }
+        
+        .identification-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(30,64,175,0.2);
+        }
+        
+        .price-section {
+            background: white;
+            margin: 50px auto;
+            padding: 60px;
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            text-align: center;
+            position: relative;
+            border: 3px solid #10b981;
+        }
+        
+        .price-section::before {
+            content: '🌟 PRECIO DE LANZAMIENTO 🌟';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f59e0b;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        
+        .price-big {
+            font-size: 4.5em;
+            color: #1e40af;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+        
+        .price-comparison {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+        
+        .price-old {
+            font-size: 1.8em;
+            text-decoration: line-through;
+            color: #ef4444;
+            margin-bottom: 15px;
+        }
+        
+        .savings {
+            background: #f59e0b;
+            color: white;
+            padding: 18px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.3em;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            color: white;
+            padding: 30px 60px;
+            font-size: 1.9em;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            margin: 25px 0;
+            box-shadow: 0 20px 40px rgba(30,64,175,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 50px rgba(30,64,175,0.5);
+        }
+        
+        .section {
+            background: white;
+            margin: 50px 0;
+            padding: 60px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+        }
+        
+        .section h2 {
+            font-size: 2.8em;
+            color: #1e40af;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+            border-radius: 2px;
+        }
+        
+        .author-section {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            padding: 60px;
+            border-radius: 25px;
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        .author-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .author-content h3 {
+            color: #1e40af;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .author-content p {
+            font-size: 1.2em;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .method-section {
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+            color: white;
+            padding: 60px;
+            border-radius: 25px;
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        .method-section h3 {
+            font-size: 2.8em;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+        
+        .method-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .method-step {
+            background: rgba(255,255,255,0.15);
+            padding: 35px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+        
+        .method-step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #fbbf24;
+            margin-bottom: 15px;
+        }
+        
+        .method-step h4 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .results-section {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-left: 6px solid #10b981;
+            padding: 60px;
+            border-radius: 25px;
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        .results-section h3 {
+            color: #065f46;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .result-item {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 4px solid #10b981;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .result-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(16,185,129,0.2);
+        }
+        
+        .result-item h4 {
+            color: #10b981;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .testimonial-section {
+            background: linear-gradient(135deg, #fef7f0 0%, #fed7aa 100%);
+            padding: 60px;
+            border-radius: 25px;
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            border-left: 6px solid #f59e0b;
+            font-style: italic;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 30px;
+            font-size: 4em;
+            color: #f59e0b;
+            opacity: 0.3;
+        }
+        
+        .testimonial .name {
+            font-weight: bold;
+            color: #d97706;
+            margin-top: 20px;
+            font-style: normal;
+        }
+        
+        .modules-section {
+            background: white;
+            padding: 60px;
+            border-radius: 25px;
+            margin: 50px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .module-item {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 35px;
+            border-radius: 20px;
+            border-left: 6px solid #1e40af;
+            transition: transform 0.3s ease;
+        }
+        
+        .module-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(30,64,175,0.1);
+        }
+        
+        .module-item h4 {
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .bonus-section {
+            background: white;
+            padding: 60px;
+            border-radius: 25px;
+            margin: 50px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .bonus-section::before {
+            content: '🎁 BONOS EXCLUSIVOS 🎁';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f59e0b;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        
+        .bonus-visual {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bonus-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(251,191,36,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(251,191,36,0.1) 0%, transparent 50%);
+        }
+        
+        .bonus-visual-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .bonus-visual h3 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #fbbf24;
+        }
+        
+        .bonus-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .bonus-item {
+            background: rgba(255,255,255,0.15);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(30,64,175,0.3);
+        }
+        
+        .bonus-item h4 {
+            color: #1e40af;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .guarantee-section {
+            background: linear-gradient(135deg, #ecfdf5 0%, #a7f3d0 100%);
+            border: 3px solid #10b981;
+            padding: 60px;
+            border-radius: 25px;
+            text-align: center;
+            margin: 50px 0;
+            box-shadow: 0 20px 40px rgba(16,185,129,0.2);
+        }
+        
+        .guarantee-section h3 {
+            color: #065f46;
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .guarantee-section p {
+            font-size: 1.3em;
+            color: #065f46;
+            line-height: 1.7;
+        }
+        
+        .faq-section {
+            background: white;
+            padding: 60px;
+            border-radius: 25px;
+            margin: 50px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+        
+        .faq-container {
+            margin-top: 40px;
+        }
+        
+        .faq-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            margin-bottom: 25px;
+            border-radius: 20px;
+            overflow: hidden;
+            border-left: 5px solid #1e40af;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .faq-question {
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            color: white;
+            padding: 25px;
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        .faq-answer {
+            padding: 25px;
+            margin: 0;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: white;
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.05)"><polygon points="0,100 1000,0 1000,100"/></svg>');
+            background-size: cover;
+        }
+        
+        .final-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .final-cta h2 {
+            margin-bottom: 30px;
+            font-size: 3.2em;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .final-cta p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .header .subtitle {
+                font-size: 1.4em;
+            }
+            
+            .price-big {
+                font-size: 3.5em;
+            }
+            
+            .section {
+                padding: 40px 30px;
+            }
+            
+            .method-steps,
+            .results-grid,
+            .testimonials-grid,
+            .modules-grid,
+            .bonus-items {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-button {
+                font-size: 1.5em;
+                padding: 25px 40px;
+            }
+            
+            .video-container {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>🎯 <span class="method-name">MÉTODO V.I.D.A.®</span></h1>
+                <p class="subtitle">De jefe estresado a líder que inspira lealtad en solo 21 días</p>
+                <div class="promise">
+                    Transforma tu estilo de liderazgo, deja de apagar incendios y construye equipos sanos, comprometidos y productivos
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="urgency-banner">
+            🚨 PRECIO DE LANZAMIENTO TERMINA EL 30 DE JULIO - Solo quedan <span id="days-left"></span> días
+        </div>
+        
+        <div class="countdown-timer">
+            ⏰ TIEMPO RESTANTE: <span class="timer-numbers" id="countdown"></span>
+            <div style="font-size: 0.7em; margin-top: 10px; color: #fbbf24;">
+                Después del 30 de julio el precio sube a $197 USD
+            </div>
+        </div>
+
+        <!-- Sección de Video -->
+        <div class="video-section">
+            <h2>🎥 Mira Este Video de 4 Minutos</h2>
+            <p>Descubre cómo transformar tu liderazgo y construir equipos leales y productivos</p>
+            <div class="video-container">
+                <!-- Reemplaza VIDEO_ID_AQUI por tu ID real de YouTube -->
+                <iframe src="https://www.youtube.com/embed/-SuNnVBei-U?rel=0&showinfo=0&modestbranding=1" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Precio -->
+        <div class="price-section">
+            <h2 style="color: #1e40af; margin-bottom: 30px;">🌟 MÉTODO V.I.D.A.® COMPLETO</h2>
+            <div class="price-comparison">
+                <div class="price-old">Precio regular desde agosto: $197 USD</div>
+                <div style="font-size: 1.2em; color: #64748b; margin-bottom: 20px;">Método completo HOY:</div>
+            </div>
+            <div class="price-big">$97 USD</div>
+            <div class="savings">Ahorras $100 USD</div>
+            <p style="margin-top: 25px; font-size: 1.2em; color: #64748b;">
+                ✅ Acceso inmediato • ✅ Garantía Total • ✅ Bonos incluidos • ✅ Acceso de por vida
+            </p>
+        </div>
+
+        <!-- CTA Principal -->
+        <div style="text-align: center; margin: 60px 0; padding: 50px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 25px; border: 3px solid #1e40af;">
+            <h3 style="color: #1e40af; margin-bottom: 25px; font-size: 2.2em;">🚀 TRANSFORMA TU LIDERAZGO HOY</h3>
+            <p style="font-size: 1.3em; margin-bottom: 35px; color: #92400e; font-weight: bold;">
+                No esperes a que otro empleado valioso renuncie por patrones de liderazgo tóxico
+            </p>
+            <a href="https://pay.hotmart.com/E100745225E" target="_blank" class="cta-button" data-hotmart-onload>
+                🔥 ACCEDER AL MÉTODO V.I.D.A.® - $97 USD
+            </a>
+            <p style="color: #64748b; margin-top: 20px;">
+                <strong>⚡ Precio de lanzamiento • 🛡️ Garantía total • 💎 Ahorras $100 USD</strong>
+            </p>
+        </div>
+
+        <!-- Identificación con el lector -->
+        <div class="identification-section">
+            <h3>💬 Este programa es para ti si...</h3>
+            <div class="identification-grid">
+                <div class="identification-item">
+                    ✅ Sientes que trabajas más que tu equipo, pero los resultados no llegan
+                </div>
+                <div class="identification-item">
+                    ✅ Estás cansado de rogar compromiso o corregir los mismos errores
+                </div>
+                <div class="identification-item">
+                    ✅ Sientes que tu equipo no te respeta (aunque no lo digan abiertamente)
+                </div>
+                <div class="identification-item">
+                    ✅ Estás absorbiendo todo y te estás quedando sin energía
+                </div>
+                <div class="identification-item">
+                    ✅ Sospechas que tu estilo puede estar afectando la cultura y productividad
+                </div>
+                <div class="identification-item">
+                    ✅ Quieres ser un líder que inspira, no que intimida o controla
+                </div>
+            </div>
+        </div>
+
+        <!-- Sobre la Autora -->
+        <div class="author-section">
+            <div class="author-content">
+                <h3>🙋‍♀️ Soy Nhora Angulo, Consultora en Liderazgo Saludable</h3>
+                <p><strong>Creadora del MÉTODO V.I.D.A.®</strong></p>
+                <p>He acompañado a más de 90 líderes en empresas reales. He visto lo que el liderazgo tóxico puede causar: alta rotación, errores costosos, equipos apáticos y personas enfermas.</p>
+                <p>Y también he guiado a líderes como tú a lograr un cambio visible, profundo y medible.</p>
+                <p><strong>Este programa no es teórico. Está diseñado para accionar, transformar y liberar tu energía como líder en solo 21 días.</strong></p>
+            </div>
+        </div>
+
+        <!-- El Método V.I.D.A. -->
+        <div class="method-section">
+            <h3>📌 El MÉTODO V.I.D.A.® - 4 Pasos Transformadores</h3>
+            <p style="font-size: 1.3em; margin-bottom: 30px;">
+                Cada módulo incluye videos, guías prácticas, herramientas descargables y ejercicios paso a paso
+            </p>
+            <div class="method-steps">
+                <div class="method-step">
+                    <div class="step-number">VER</div>
+                    <h4>Hacer Visible lo Invisible</h4>
+                    <p>Identifica microgestos que sabotean tu liderazgo y los signos sutiles del desgaste en tu equipo</p>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">IDENTIFICAR</div>
+                    <h4>Lo que Te Frena</h4>
+                    <p>Reconoce el origen de tus patrones tóxicos y bloqueos internos que limitan tu efectividad</p>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">DEFINIR</div>
+                    <h4>Tu Nueva Identidad</h4>
+                    <p>Construye una nueva estructura y forma de liderar basada en la consciencia y el propósito</p>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">ASUMIR</div>
+                    <h4>Tu Impacto Real</h4>
+                    <p>Toma responsabilidad sobre tu impacto en la cultura y salud emocional del equipo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resultados que puedes esperar -->
+        <div class="results-section">
+            <h3>🎯 Resultados que Lograrás con Este Programa</h3>
+            <div class="results-grid">
+                <div class="result-item">
+                    <h4>🏆 Recuperarás el Respeto</h4>
+                    <p>Obtendrás autoridad natural sin gritar ni controlar, basada en confianza y liderazgo consciente</p>
+                </div>
+                <div class="result-item">
+                    <h4>🔍 Identificarás Patrones Destructivos</h4>
+                    <p>Reconocerás y reemplazarás comportamientos tóxicos por acciones conscientes e inspiradoras</p>
+                </div>
+                <div class="result-item">
+                    <h4>🎯 Delegarás Efectivamente</h4>
+                    <p>Reducirás tu carga operativa y empoderarás a tu equipo para mayor autonomía y responsabilidad</p>
+                </div>
+                <div class="result-item">
+                    <h4>🤝 Reconstruirás la Confianza</h4>
+                    <p>Sanarás relaciones dañadas y crearás un ambiente donde tu equipo se siente valorado y escuchado</p>
+                </div>
+                <div class="result-item">
+                    <h4>🌱 Crearás Cultura Saludable</h4>
+                    <p>Construirás un entorno que cuida, empodera y retiene talento, reduciendo rotación significativamente</p>
+                </div>
+                <div class="result-item">
+                    <h4>📈 Aumentarás Productividad</h4>
+                    <p>Lograrás mejores resultados con equipos motivados, comprometidos y alineados con la visión</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Casos Reales -->
+        <div class="testimonial-section">
+            <h2 style="color: #d97706; margin-bottom: 40px;">🗣️ Casos Reales de Transformación</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p><strong>Patricia dejó de gritar para ganarse el respeto.</strong> "En 3 semanas logré lo que no había conseguido en años: un equipo que propone, se cuida entre sí y realmente confía en mi liderazgo."</p>
+                    <div class="name">- Patricia González, Directora de Operaciones</div>
+                </div>
+                <div class="testimonial">
+                    <p><strong>Miguel redujo la rotación del 60% al 15%.</strong> "Mi equipo me sigue con lealtad. El método V.I.D.A. cambió mi forma de ver el liderazgo para siempre."</p>
+                    <div class="name">- Miguel Rodríguez, Gerente General</div>
+                </div>
+                <div class="testimonial">
+                    <p><strong>Carlos evitó una demanda laboral.</strong> "Las técnicas me ayudaron a manejar una situación crítica sin generar conflicto legal. Valió cada peso invertido."</p>
+                    <div class="name">- Carlos Mendoza, CEO</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lo que obtienes -->
+        <div class="modules-section">
+            <h2 style="color: #1e40af; text-align: center; margin-bottom: 40px;">📦 Todo lo que Incluye el Programa</h2>
+            <div class="modules-grid">
+                <div class="module-item">
+                    <h4>📚 4 Módulos Completos V.I.D.A.</h4>
+                    <p>16 clases estructuradas con videos, audios y contenido descargable para transformar tu liderazgo paso a paso</p>
+                </div>
+                <div class="module-item">
+                    <h4>🛠️ +20 Herramientas Prácticas</h4>
+                    <p>Plantillas, checklists, diagnósticos y guías descargables para implementar inmediatamente</p>
+                </div>
+                <div class="module-item">
+                    <h4>🎯 Diagnóstico Inicial Personalizado</h4>
+                    <p>Evaluación completa de tu estilo actual de liderazgo con hoja de ruta específica para tu transformación</p>
+                </div>
+                <div class="module-item">
+                    <h4>📞 Soporte Directo</h4>
+                    <p>Acceso a soporte vía correo electrónico y grupo privado de WhatsApp para resolver dudas</p>
+                </div>
+                <div class="module-item">
+                    <h4>♾️ Acceso de Por Vida</h4>
+                    <p>Una vez que adquieres el método, es tuyo para siempre. Sin límites de tiempo ni restricciones</p>
+                </div>
+                <div class="module-item">
+                    <h4>📱 Compatible con Todos los Dispositivos</h4>
+                    <p>Accede desde computadora, tablet o móvil. Aprende a tu ritmo, donde y cuando quieras</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bonos Exclusivos -->
+        <div class="bonus-section">
+            <div class="bonus-visual">
+                <div class="bonus-visual-content">
+                    <h3>BONOS EXCLUSIVOS</h3>
+                    <p style="font-size: 1.3em; margin-bottom: 30px;">
+                        Si compras HOY, recibes estos bonos adicionales GRATIS (Valor $150 USD):
+                    </p>
+                    <div class="bonus-items">
+                        <div class="bonus-item">
+                            <h4>💻 MiniCurso: Liderar sin Burnout</h4>
+                            <p>Estrategias para mantener tu energía y evitar el agotamiento como líder (Valor: $67 USD)</p>
+                        </div>
+                        <div class="bonus-item">
+                            <h4>📖 Manual de Crisis para Líderes</h4>
+                            <p>Guía completa para manejar situaciones difíciles y conflictos en el equipo (Valor: $53 USD)</p>
+                        </div>
+                        <div class="bonus-item">
+                            <h4>🌎 Comunidad Privada LATAM</h4>
+                            <p>Acceso exclusivo a red de líderes latinoamericanos en transformación (Valor: $30 USD)</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 30px; font-size: 1.2em; font-weight: bold;">
+                        ¡Total de bonificaciones: $150 USD - GRATIS solo con precio de lanzamiento!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda CTA -->
+        <div style="text-align: center; margin: 60px 0; padding: 50px; background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); border-radius: 25px; color: white;">
+            <div style="background: rgba(30,64,175,0.2); padding: 20px; border-radius: 15px; margin-bottom: 25px; border: 2px solid #1e40af;">
+                <h3 style="margin: 0; font-size: 1.5em; color: #1e40af;">⏰ QUEDAN SOLO <span id="countdown-cta"></span></h3>
+            </div>
+            <h3 style="margin-bottom: 25px; font-size: 2.2em;">🔥 ÚLTIMA OPORTUNIDAD - PRECIO DE LANZAMIENTO</h3>
+            <p style="font-size: 1.3em; margin-bottom: 35px;">
+                Tu equipo no puede esperar más. Cada día que pases sin actuar es talento que pierdes
+            </p>
+            <a href="https:/https://pay.hotmart.com/E100745225E" target="_blank" class="cta-button" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;" data-hotmart-onload>
+                ⚡ TRANSFORMAR MI LIDERAZGO - $97 USD
+            </a>
+            <p style="margin-top: 20px; opacity: 0.9;">
+                <strong>✅ Hoy $97 USD • ✅ Del 31 julio en adelante $197 USD</strong>
+            </p>
+        </div>
+
+        <!-- Garantía -->
+        <div class="guarantee-section">
+            <h3>🛡️ Garantía de Transformación V.I.D.A.®</h3>
+            <p style="margin-bottom: 25px;">
+                <strong>Si no tienes resultados aplicando el paso a paso  en tus primeros 7 días, te devolvemos tu inversión.</strong>
+            </p>
+            <p>Sin riesgos. Sin preguntas. Tu transformación está garantizada.</p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <h2 style="color: #1e40af; text-align: center; margin-bottom: 40px;">❓ Preguntas Frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Necesito experiencia previa en liderazgo?</h3>
+                    <div class="faq-answer">
+                        <p>No, solo necesitas compromiso para transformar tu rol. El método está diseñado desde lo básico hasta lo avanzado, adaptándose a tu nivel actual.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Puedo hacer el curso a mi ritmo?</h3>
+                    <div class="faq-answer">
+                        <p>Absolutamente. El contenido es 100% online y tienes acceso de por vida. Puedes avanzar según tu disponibilidad de tiempo.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Este curso aplica a cualquier industria?</h3>
+                    <div class="faq-answer">
+                        <p>Sí, especialmente útil en empresas de servicios, retail, salud, manufactura y educación. Los principios de liderazgo consciente son universales.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Qué pasa si no actúo antes del 30 de julio?</h3>
+                    <div class="faq-answer">
+                        <p>Perderás la oportunidad de acceder al método por $97 USD. A partir del 31 de julio, el precio será de $197 USD sin bonos incluidos.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Qué pasa si tengo dudas durante el curso?</h3>
+                    <div class="faq-answer">
+                        <p>Tienes acceso a soporte directo por correo electrónico y al grupo privado de WhatsApp donde puedes resolver cualquier duda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formas de Pago -->
+        <div class="section">
+            <h2>💳 Pago 100% Seguro con Hotmart</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0;">
+                <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); color: #1e40af; padding: 20px; border-radius: 15px; text-align: center; border: 2px solid #1e40af;">
+                    <h4 style="margin-bottom: 15px;">💳 Tarjetas</h4>
+                    <p>Visa, Mastercard, American Express - Hasta 12x sin intereses</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); color: #1e40af; padding: 20px; border-radius: 15px; text-align: center; border: 2px solid #1e40af;">
+                    <h4 style="margin-bottom: 15px;">🏦 Transferencias</h4>
+                    <p>Débito bancario, PIX, PSE - Descuento por pago a vista</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); color: #1e40af; padding: 20px; border-radius: 15px; text-align: center; border: 2px solid #1e40af;">
+                    <h4 style="margin-bottom: 15px;">📱 Digitales</h4>
+                    <p>PayPal, PagSeguro, Mercado Pago - Pago rápido y seguro</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 20px; color: #64748b; font-size: 1.1em;">
+                🔒 <strong>Pago 100% seguro • Acceso inmediato • Protección total del consumidor</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- CTA Final -->
+    <div class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>🚀 Tu Equipo No Necesita un Líder Perfecto. Necesita Uno Valiente.</h2>
+                <p style="font-size: 1.4em; margin-bottom: 30px;">
+                    <strong>Solo quedan <span id="countdown-final"></span> para el precio de lanzamiento</strong><br>
+                    <strong>$97 USD HOY vs $197 USD después del 30 de julio</strong><br>
+                    <strong>Uno que esté dispuesto a mirar hacia dentro, cambiar y liderar con propósito</strong>
+                </p>
+                <a href="https:/https://pay.hotmart.com/E100745225E" target="_blank" class="cta-button" style="font-size: 2.1em; padding: 35px 60px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);" data-hotmart-onload>
+                    🌟 EMPEZAR MI TRANSFORMACIÓN HOY - $97 USD
+                </a>
+                <p style="margin-top: 30px; font-size: 1.2em;">
+                    ✅ <strong>Transformación garantizada en 21 días</strong><br>
+                    ✅ <strong>Ahorras $100 USD + Bonos gratis</strong><br>
+                    ✅ <strong>Acceso de por vida sin restricciones</strong><br>
+                    ✅ <strong>Soporte directo incluido</strong>
+                </p>
+                <div style="background: rgba(30,64,175,0.2); padding: 25px; border-radius: 20px; margin-top: 35px; border: 2px solid rgba(30,64,175,0.5);">
+                    <p style="font-size: 1.3em; font-weight: bold; color: #fff; margin: 0;">
+                        🚨 ÚLTIMA OPORTUNIDAD: Esta oferta expira el 30 de julio a las 23:59<br>
+                        Haz clic en el botón y empieza HOY tu transformación
+                    </p>
+                </div>
+                <p style="margin-top: 30px; font-size: 1.1em; opacity: 0.8;">
+                    <em>"El liderazgo que sana no es perfecto: es valiente, consciente y coherente."</em>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función para calcular días restantes hasta el 30 de julio
+        function calculateDaysLeft() {
+            const today = new Date();
+            const targetDate = new Date('2025-07-30T23:59:59');
+            const timeDiff = targetDate.getTime() - today.getTime();
+            const daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
+            return Math.max(0, daysLeft);
+        }
+
+        // Función para formatear el countdown
+        function formatCountdown() {
+            const today = new Date();
+            const targetDate = new Date('2025-07-30T23:59:59');
+            const timeDiff = targetDate.getTime() - today.getTime();
+            
+            if (timeDiff <= 0) {
+                return "¡OFERTA EXPIRADA!";
+            }
+            
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            
+            return `${days}d ${hours}h ${minutes}m`;
+        }
+
+        // Función para actualizar todos los contadores
+        function updateCountdowns() {
+            const daysLeft = calculateDaysLeft();
+            const countdown = formatCountdown();
+            
+            // Actualizar días restantes
+            const daysElements = document.querySelectorAll('#days-left');
+            daysElements.forEach(el => {
+                if (el) el.textContent = daysLeft;
+            });
+            
+            // Actualizar countdowns
+            const countdownElements = document.querySelectorAll('#countdown, #countdown-cta, #countdown-final');
+            countdownElements.forEach(el => {
+                if (el) el.textContent = countdown;
+            });
+        }
+
+        // Actualizar countdowns cada minuto
+        setInterval(updateCountdowns, 60000);
+        
+        // Inicializar countdown al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCountdowns();
+            
+            // Inicializar elementos para animaciones
+            const elements = document.querySelectorAll('.section, .method-step, .result-item, .testimonial');
+            elements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+            });
+        });
+
+        // Función para manejar CTAs
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Aquí se integraría el procesador de pagos
+                alert('Procesador de pagos - MÉTODO V.I.D.A.® por $97 USD\n\n¡PRECIO DE LANZAMIENTO!\n\nAcceso inmediato después del pago\n\nOferta válida solo hasta el 30 de julio');
+            });
+        });
+
+        // Animaciones al scroll
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.section, .method-step, .result-item, .testimonial, .module-item');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                    element.style.transition = 'all 0.6s ease';
+                }
+            });
+        });
+
+        // Destacar urgencia con efecto visual cada 8 segundos
+        setInterval(function() {
+            const urgencyElements = document.querySelectorAll('.urgency-banner, .countdown-timer');
+            urgencyElements.forEach(element => {
+                element.style.transform = 'scale(1.03)';
+                element.style.transition = 'transform 0.3s ease';
+                setTimeout(() => {
+                    element.style.transform = 'scale(1)';
+                }, 300);
+            });
+        }, 8000);
+
+        // Efecto de parpadeo para elementos críticos cada 15 segundos
+        setInterval(function() {
+            const criticalElements = document.querySelectorAll('.timer-numbers');
+            criticalElements.forEach(element => {
+                element.style.color = '#fbbf24';
+                setTimeout(() => {
+                    element.style.color = '#f59e0b';
+                }, 500);
+            });
+        }, 15000);
+    </script>
+</body>
+</html>
